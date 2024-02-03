@@ -1,0 +1,91 @@
+<html>
+<center>
+<head>
+<br>
+<br>
+<front-size>
+<title> ¿Cuánto fumas? </title>
+  <p><strong><h1>¿Cuánto fumas? </strong></p></h1>
+</front-size>
+   <br>
+   <br>
+</head>
+<body>
+
+    <label for="numeros">Número de cigarros que fumas al día:</label>
+    <select id="numeros" onchange="mostrarNumero()">
+	    <option value="" disabled selected style="display:none;"></option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+		<option value="15">15</option>
+        <option value="20">20</option>
+		<option value="25">25</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+        <option value="50">50</option>
+    </select>
+<br>
+    <p id="fraseResultado">Aquí te indicará cuantos días pierdes al año </p>
+
+    <script>
+	        function mostrarNumero() {
+            var seleccion = document.getElementById("numeros");
+            var numeroSeleccionado = parseInt(seleccion.value);
+            var fraseResultado = "";
+
+            if (numeroSeleccionado === 5) {
+                fraseResultado = "Si sigues fumando esa cantidad de cigarros diarios, perderás 14 días de tu vida al año.";
+            } else if (numeroSeleccionado === 10) {
+                fraseResultado = "Si sigues fumando esa cantidad de cigarros diarios, perderás 28 días de tu vida al año.";
+			} else if (numeroSeleccionado === 15) {
+                fraseResultado = "Si sigues fumando esa cantidad de cigarros diarios, perderás 42 días de tu vida al año.";
+            } else if (numeroSeleccionado === 20) {
+                fraseResultado = "Si sigues fumando esa cantidad de cigarros diarios, perderás 56 días de tu vida al año.";
+            } else if (numeroSeleccionado === 25) {
+                fraseResultado = "Si sigues fumando esa cantidad de cigarros diarios, perderás 70 días de tu vida al año.";
+            } else if (numeroSeleccionado === 30) {
+                fraseResultado = "Si sigues fumando esa cantidad de cigarros diarios, perderás 84 días de tu vida al año.";
+            } else if (numeroSeleccionado === 40) {
+                fraseResultado = "Si sigues fumando esa cantidad de cigarros diarios, perderás 112 días de tu vida al año.";
+            } else if (numeroSeleccionado === 50) {
+                fraseResultado = "Si sigues fumando esa cantidad de cigarros diarios, perderás 140 días de tu vida al año.";
+            } else {
+                fraseResultado = "Seleccione un número válido.";
+            }
+
+            document.getElementById("fraseResultado").textContent = fraseResultado;
+        }
+    </script>
+
+</body>
+<br>
+<br>
+<body>
+Recuerda que si fumas tienes un 15-30% de probabilidad de padecer un cácer de pulmón <br>
+y morir por esta enfermedad
+<body>
+
+    <p>▼</p>
+
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilos para el contenedor rectangular */
+        #rectangulo {
+            border: 2px solid #333; /* Borde del rectángulo */
+            padding: 10px; /* Espaciado interno del rectángulo */
+            width: 300px; /* Ancho del rectángulo */
+            text-align: center; /* Centrar el texto horizontalmente */
+            margin: 20px; /* Margen exterior del rectángulo */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="rectangulo">
+        Cada año mueren unas 23.00 personas de cáncer de pulmón.
+    </div>
+</center>
+</html>
